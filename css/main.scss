@@ -1,0 +1,398 @@
+/* BASICS */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --ltgrey: #f7f7f7;
+  --mdgrey: #aaaaaa;
+  --dkgrey: #666666;
+  --ltteal: #d1e7e3;
+  --teal: #21d8d9;
+  --dkteal: #22a6ab;
+  --blue: #006dc7;
+  --navy: #003b6b;
+  --dknavy: #03104d;
+  --red: #fe4a49;
+  --disabled: #e0e0e0;
+  --maxW: 1292px;
+  --halfW: 597px;
+  --qartW: 290px;
+  --dropbox: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  --radius: 4px;
+  --ubuntu: 'Ubuntu', sans-serif;
+  --sanspro: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  color: var(--dknavy);
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 8px 0;
+  line-height: 1.1;
+
+  span {
+    color: var(--dkteal);
+  }
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 22px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 4px 0 8px 0;
+  line-height: 1.2;
+  font-size: 16px;
+  font-family: var(--sanspro);
+}
+
+ul,
+ol {
+  padding: 8px 0 8px 22px;
+
+  li {
+    padding: 0 0 8px 0;
+  }
+}
+
+pre,
+code {
+  margin: 8px 0;
+  padding: 16px;
+  line-height: 1.2;
+  font-size: 16px;
+  background: var(--ltgrey);
+  font-weight: 100;
+}
+
+@media only screen and (min-width: 715px) {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 42px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 12px;
+  }
+  p,
+  ul,
+  ol {
+    font-size: 18px;
+  }
+  pre,
+  code {
+    font-size: 18px;
+  }
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 150ms;
+}
+
+a:hover {
+  color: var(--blueburn);
+  text-decoration: underline;
+  transition: color 150ms;
+}
+
+#domains {
+  .domain-controls {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background: var(--ltgrey);
+    margin: 0 auto;
+    padding: 8px 16px;
+
+    .domain-filter {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+
+      .filter-type {
+        flex: 1;
+        max-width: 96px;
+        margin-right: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--blue);
+        text-align: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        h6 {
+          padding-top: 0;
+        }
+
+        .toggle-switch {
+          position: relative;
+          display: inline-block;
+          width: 40px;
+          height: 20px;
+          padding: 0;
+        }
+
+        .toggle-switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--disabled);
+          border-radius: 34px;
+          transition: 400ms;
+        }
+
+        .slider:before {
+          position: absolute;
+          content: '';
+          height: 16px;
+          width: 16px;
+          right: 2px;
+          bottom: 2px;
+          border-radius: 50%;
+          background-color: var(--mdgrey);
+          transition: 400ms;
+        }
+
+        input:checked + .slider {
+          background-color: var(--blue);
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px var(--navy);
+        }
+
+        input:checked + .slider:before {
+          transform: translateX(-20px);
+          background-color: var(--white);
+        }
+      }
+    }
+    .domain-edit {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 715px) {
+  #domains {
+    .domain-controls {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 16px;
+
+      .domain-filter {
+        display: flex;
+        justify-content: flex-start;
+
+        .filter-type {
+          margin-right: 16px;
+
+          .toggle-switch {
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+          }
+
+          .slider:before {
+            height: 20px;
+            width: 20px;
+            right: 2px;
+            bottom: 2px;
+          }
+
+          input:checked + .slider:before {
+            transform: translateX(-26px);
+          }
+        }
+      }
+      .domain-edit {
+        display: block;
+      }
+    }
+  }
+}
+
+/* IMPORT COMPONENTS */
+@import 'components/_components';
+
+/* RESETS & OVERRIDES */
+._nomar {
+  margin: 0 !important;
+}
+._nopad {
+  padding: 0 !important;
+}
+._invis {
+  visibility: hidden !important;
+}
+._hidden {
+  display: none !important;
+}
+._left {
+  text-align: left !important;
+}
+._right {
+  text-align: right !important;
+}
+._center {
+  text-align: center !important;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

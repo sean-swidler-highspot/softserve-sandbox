@@ -1,0 +1,34 @@
+.content-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+
+  > .content-container {
+    position: relative;
+    width: 100%;
+    max-width: 1292px;
+    height: auto;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  &._banner {
+    background-color: var(--navy);
+    margin: 16px 0;
+
+    > .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) {
+}

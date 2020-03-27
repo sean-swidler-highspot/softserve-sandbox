@@ -1,0 +1,243 @@
+#nav {
+  background-color: var(--blue);
+}
+
+#nav nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px 0;
+}
+
+#nav nav .nav-logo {
+  width: 24px;
+  height: 36px;
+  background: url("../img/logo-softserve.svg") no-repeat left center;
+  background-size: cover;
+}
+
+#nav nav .nav-search {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  max-width: 638px;
+  margin: 0 1% 0 16px;
+}
+
+#nav nav .nav-search input[type='search'] {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  padding: 0 48px 0 24px;
+  color: var(--dknavy);
+  background: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#nav nav .nav-search .nav-search-icon {
+  position: relative;
+  top: 0px;
+  right: -2px;
+  width: 32px;
+  height: 32px;
+  background: var(--blue) url("../img/icon-search.svg") no-repeat center center;
+  background-size: 18px 18px;
+  border: 2px solid var(--white);
+  border-radius: 42px;
+  cursor: pointer;
+}
+
+#nav nav .nav-user {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50px;
+}
+
+#nav nav .nav-user .nav-user-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--mdgrey);
+  cursor: pointer;
+}
+
+#nav nav .nav-user .nav-user-img img {
+  width: 100%;
+  height: auto;
+}
+
+#nav nav .nav-user .nav-user-info {
+  display: none;
+}
+
+#nav nav .nav-user .nav-user-control {
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 24px;
+  left: -48px;
+  z-index: 3;
+}
+
+#nav nav .nav-user .nav-user-control .user-control-tab {
+  position: relative;
+  z-index: 2;
+  top: 8px;
+  left: 74px;
+  width: 16px;
+  height: 16px;
+  background: var(--navy);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#nav nav .nav-user .nav-user-control p {
+  position: relative;
+  z-index: 3;
+  padding: 8px 16px;
+  line-height: 1rem;
+  font-size: 12px;
+  color: var(--white);
+  background: var(--navy);
+  border-bottom: 1px solid var(--blue);
+  border-right: 1px solid var(--navy);
+  border-left: 1px solid var(--navy);
+  cursor: pointer;
+}
+
+#nav nav .nav-user .nav-user-control p:first-child {
+  border-top: 1px solid var(--navy);
+}
+
+@media only screen and (min-width: 715px) {
+  #nav {
+    background-color: var(--blue);
+  }
+  #nav nav .nav-logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    max-width: 202px;
+    height: 40px;
+    background-size: contain;
+  }
+  #nav nav .nav-search {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 638px;
+    margin: 0 2%;
+  }
+  #nav nav .nav-search input[type='search'] {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    padding: 0 48px 0 24px;
+    color: var(--dknavy);
+    background: var(--white);
+    border: 0;
+    border-radius: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #nav nav .nav-search .nav-search-icon {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 40px;
+    height: 40px;
+    background: var(--blue) url("../img/icon-search.svg") no-repeat center center;
+    background-size: 22px 22px;
+    border: 2px solid var(--white);
+    border-radius: 42px;
+    cursor: pointer;
+  }
+  #nav nav .nav-user {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 202px;
+  }
+  #nav nav .nav-user .nav-user-img {
+    width: 40px;
+    height: 40px;
+  }
+  #nav nav .nav-user .nav-user-info {
+    display: block;
+    position: relative;
+    width: 154px;
+    margin: 0 0 0 8px;
+    padding: 4px 0 0 0;
+    cursor: pointer;
+  }
+  #nav nav .nav-user .nav-user-info p {
+    padding: 0;
+    line-height: 1rem;
+    font-size: 12px;
+    color: var(--white);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  #nav nav .nav-user .nav-user-control {
+    width: 202px;
+    top: 32px;
+    left: 0;
+  }
+  #nav nav .nav-user .nav-user-control .user-control-tab {
+    top: 8px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background: var(--navy);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  #nav nav .nav-user .nav-user-control p {
+    padding: 8px 16px;
+    -webkit-transition: padding ease-in-out 100ms;
+    transition: padding ease-in-out 100ms;
+  }
+  #nav nav .nav-user .nav-user-control p:hover {
+    padding: 8px 16px 8px 20px;
+    -webkit-transition: padding ease-in-out 100ms;
+    transition: padding ease-in-out 100ms;
+  }
+}
+/*# sourceMappingURL=navigation.css.map */

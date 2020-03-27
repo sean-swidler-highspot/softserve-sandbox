@@ -1,0 +1,210 @@
+
+/* FORMS */
+form {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--ltgrey);
+    box-shadow: var(--dropbox);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+
+        article {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            padding: 8px 0;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@media only screen and (min-width: 715px) {
+    form {
+        section {
+            flex-direction: row;
+
+            article {
+                padding: 8px;
+            }
+        }
+    }
+}
+
+/* INPUTS */
+label {
+    display: block;
+    padding: 0 0 4px 0;
+    font-family: var(--ubuntu);
+    font-weight: bold;
+}
+
+/* TEXT - PASSWORD - EMAIL */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    height: 32px;
+    padding: 8px;
+    border: 1px solid var(--mdgrey);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+}
+
+/* TELEPHONE - NUMBER - DATE */
+input[type=tel], input[type=number], input[type=date] {
+    width: 100%;
+    max-width: var(--qartW);
+    height: 32px;
+    padding: 8px;
+    border: 1px solid var(--mdgrey);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+}
+
+/* TEXT AREA */
+textarea {
+    width: 100%;
+    max-width: var(--halfW);
+    height: 64px;
+    padding: 8px;
+    border: 1px solid var(--mdgrey);
+    border-radius: var(--radius);
+    box-sizing: border-box;
+}
+
+/* BUTTONS */
+input[type=button], input[type=submit], input[type=reset] {
+    margin: 8px 8px 16px 0;
+    padding: 4px 24px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-family: var(--sanspro);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=button] {
+    background: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--blue);
+}
+
+input[type=submit] {
+    background: var(--navy);
+    color: var(--white);
+    border: 2px solid var(--navy);
+}
+
+input[type=reset] {
+    background: var(--white);
+    color: var(--navy);
+    border: 2px solid var(--navy);
+}
+
+/* CUSTOM RADIO */
+.radio {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 16px;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        left: 0;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        z-index: 2;
+
+        &:hover ~ span { // Mouse Over
+            background-color: var(--mdgrey);
+        }
+
+        &:checked ~ span { // Selected
+            background-color: var(--blue);
+            border: 1px solid var(--blue);
+        }
+
+        &:checked ~ span:after { // Selected Radio
+            display: block;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: var(--ltgrey);
+        border: 1px solid var(--mdgrey);
+        border-radius: 50%;
+
+        &:after { // Unselected Radio
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+}
+
+/* CUSTOM CHECKBOXES */
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 16px;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        left: 0;
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        z-index: 2;
+
+        &:hover ~ span { // Mouse Over
+            background-color: var(--mdgrey);
+        }
+
+        &:checked ~ span { // Selected
+            background-color: var(--blue);
+            border: 1px solid var(--blue);
+        }
+
+        :checked ~ span:after { // Selected Checkbox
+            display: block;
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: var(--ltgrey);
+        border: 1px solid var(--mdgrey);
+
+        &:after { // Unselected Checkbox
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+}

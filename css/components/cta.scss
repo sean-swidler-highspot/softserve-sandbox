@@ -1,0 +1,70 @@
+/* CALL TO ACTION */
+a.cta-button {
+  display: table;
+  height: 16px;
+  margin: 8px 0 16px 0;
+  padding: 8px 24px;
+  line-height: 1.2;
+  font-size: 16px;
+  font-family: var(--sanspro);
+  text-align: center;
+  background: var(--blue);
+  color: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 150ms, border 150ms, color 150ms;
+  cursor: pointer;
+
+  &._small {
+    height: 16px;
+    margin: 8px 0 16px 0;
+    padding: 4px 16px;
+    line-height: 1.2;
+    font-size: 13px;
+  }
+
+  &._invert {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    margin: 16px auto;
+
+    &:hover {
+      background: var(--white);
+      color: var(--navy);
+    }
+  }
+
+  &._hollow {
+    background: transparent;
+    color: var(--blue);
+
+    &:hover {
+      color: var(--white);
+      background: var(--blue);
+      border: 2px solid var(--blue);
+      transition: background-color 150ms, border 150ms, color 150ms;
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  background: url('../img/icon-close.svg');
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 715px) {
+  a.cta-button {
+    height: 24px;
+    padding: 8px 32px;
+    font-size: 18px;
+  }
+}
