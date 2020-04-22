@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  > .content-container {
+  .content-container {
     position: relative;
     width: 100%;
     max-width: 1292px;
@@ -20,7 +20,7 @@
     background-color: var(--navy);
     margin: 16px 0;
 
-    > .content-container {
+    .content-container {
       display: flex;
       flex-direction: column;
       justify-content: center;

@@ -17,10 +17,10 @@
 }
 
 #nav nav .nav-logo {
-  width: 24px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   background: url("../img/logo-softserve.svg") no-repeat left center;
-  background-size: cover;
+  background-size: 226px 34px;
 }
 
 #nav nav .nav-search {

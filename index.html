@@ -1,305 +1,373 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Highspot | SoftServe</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" href="icon.png" />
-    <link href="favicon.png" rel="shortcut icon" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
 
-  <body>
-    <!--[if IE]>
+<head>
+  <meta charset="utf-8" />
+  <title>Highspot | SoftServe</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <link href="favicon.png" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
         <a href="https://browsehappy.com/">upgrade your browser</a> to improve
         your experience and security.
       </p>
     <![endif]-->
-    <div id="root">
+  <div id="root">
+
+    <div class="content-wrapper">
+      <!-- CUSTOM COMPONENTS -->
+      <div class="content-container">
+        <h1>CUSTOM <span>COMPONENTS</span></h1>
+      </div>
+      <div class="content-wrapper" id="nav">
+        <div class="content-container">
+          <nav>
+            <div class="nav-logo"></div>
+            <div class="nav-search">
+              <input type="search" placeholder="Search..." />
+              <div class="nav-search-icon"></div>
+            </div>
+            <div class="nav-user">
+              <div class="nav-user-img">
+                <img src="img/icon-user.svg" border="0" />
+              </div>
+              <div class="nav-user-info">
+                <p><strong>Firstname Lastname</strong></p>
+                <p>{Org} / {Pod} / {Role}</p>
+              </div>
+              <div class="nav-user-control">
+                <div class="user-control-tab"></div>
+                <div class="user-control-list">
+                  <p>View Profile</p>
+                  <p>Sign Out</p>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
       <div class="content-wrapper">
-        <!-- CUSTOM COMPONENTS -->
-        <div class="content-container">
-          <h1>CUSTOM <span>COMPONENTS</span></h1>
-        </div>
-        <div class="content-wrapper" id="nav">
-          <div class="content-container">
-            <nav>
-              <div class="nav-logo"></div>
-              <div class="nav-search">
-                <input type="search" placeholder="Search..." />
-                <div class="nav-search-icon"></div>
-              </div>
-              <div class="nav-user">
-                <div class="nav-user-img">
-                  <img src="img/icon-user.svg" border="0" />
-                </div>
-                <div class="nav-user-info">
-                  <p><strong>Firstname Lastname</strong></p>
-                  <p>{Org} / {Pod} / {Role}</p>
-                </div>
-                <div class="nav-user-control">
-                  <div class="user-control-tab"></div>
-                  <div class="user-control-list">
-                    <p>View Profile</p>
-                    <p>Sign Out</p>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
+        <div class="content-container" id="domains">
 
-        <div class="content-wrapper">
-          <div class="content-container" id="domains">
-            <div class="domain-controls">
-              <div class="domain-filter">
-                <div class="filter-type">
-                  <h6>LIVE</h6>
-                  <label class="toggle-switch">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
-                <div class="filter-type">
-                  <h6>RENEWAL</h6>
-                  <label class="toggle-switch">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
-                <div class="filter-type">
-                  <h6>IMPLEMENT</h6>
-                  <label class="toggle-switch">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
-                <div class="filter-type">
-                  <h6>POC</h6>
-                  <label class="toggle-switch">
-                    <input type="checkbox" checked />
-                    <span class="slider"></span>
-                  </label>
-                </div>
+          <!-- CONTROLS -->
+          <div class="domain-controls">
+            <div class="domain-filter">
+              <div class="filter-type">
+                <h6>LIVE</h6>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
               </div>
-              <div class="domain-edit">
-                <a class="cta-button _small _hollow" id="edit">EDIT</a>
+              <div class="filter-type">
+                <h6>RENEWAL</h6>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="filter-type">
+                <h6>IMPLEMENT</h6>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+              <div class="filter-type">
+                <h6>POC</h6>
+                <label class="toggle-switch">
+                  <input type="checkbox" checked />
+                  <span class="slider"></span>
+                </label>
               </div>
             </div>
-            <div class="domain-list">
-              Domain Tiles
+            <div class="domain-edit">
+              <a class="cta-button _small _hollow" id="edit">EDIT</a>
             </div>
           </div>
-        </div>
 
-        <div class="content-wrapper _banner">
-          <div class="content-container">
-            <div class="close"></div>
-            <h5>This is a banner!</h5>
-            <p>
-              Wow! Very exciting stuff. Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Consequatur incidunt corrupti tempore saepe
-              velit rem quisquam dolores illum necessitatibus nisi enim iusto,
-              omnis alias. Facere est mollitia obcaecati quam labore?
-            </p>
-            <a href="" class="cta-button _invert" title="cta-button _invert"
-              >Standard CTA</a
-            >
+          <!-- CARD LIST -->
+          <div class="domain-list">
+
+            <!-- CARD 1 -->
+            <div class="domain-card">
+              <div class="domain-health _good"></div>
+              <div class="domain-name">
+                <h4>Domain Name 1</h4>
+              </div>
+              <div class="domain-status">
+                <h5>Live</h5>
+              </div>
+              <div class="domain-view"></div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="domain-card">
+              <div class="domain-health _err"></div>
+              <div class="domain-view"></div>
+              <div class="domain-name">
+                <h4>Domain Name 2</h4>
+              </div>
+              <div class="domain-status">
+                <h5>Proof of Concept</h5>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="domain-card">
+              <div class="domain-health _renew"></div>
+              <div class="domain-view"></div>
+              <div class="domain-name">
+                <h4>Domain Name 3</h4>
+              </div>
+              <div class="domain-status">
+                <h5>Renewal</h5>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="domain-card">
+              <div class="domain-health _off"></div>
+              <div class="domain-view"></div>
+              <div class="domain-name">
+                <h4>Domain Name 4</h4>
+              </div>
+              <div class="domain-status">
+                <h5>Implement</h5>
+              </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="domain-card">
+              <div class="domain-health _good"></div>
+              <div class="domain-name">
+                <h4>Domain Name 5</h4>
+              </div>
+              <div class="domain-status">
+                <h5>Live</h5>
+              </div>
+              <div class="domain-view"></div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="domain-card">
+              <div class="domain-health _good"></div>
+              <div class="domain-name">
+                <h4>Domain Name 6</h4>
+              </div>
+              <div class="domain-status">
+                <h5>Live</h5>
+              </div>
+              <div class="domain-view"></div>
+            </div>
+
+          </div>
+
+          <!-- SHOW ALL CARDS -->
+          <div class="domain-view-all">
+            <a class="cta-button _small _hollow" id="edit">VIEW ALL</a>
           </div>
         </div>
 
-        <!--STANDARD COMPONENTS-->
-        <div class="content-container">
-          <h1>STANDARD <span>COMPONENTS</span></h1>
-        </div>
-        <div class="content-container">
-          <h1>Heading <span>1</span></h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis,
-            reiciendis quis corporis repellendus vel magni odio. Blanditiis
-            doloribus magni neque mollitia expedita, veniam totam tenetur
-            accusantium maxime. Quia, <a href="">cupiditate eveniet</a>.
-          </p>
-
-          <ul>
-            <li>Unordered List Item 1</li>
-            <li>Unordered List Item 2</li>
-          </ul>
-
-          <ol>
-            <li>Ordered List Item 1</li>
-            <li>Ordered List Item 2</li>
-          </ol>
-
-          <a href="" class="cta-button" title="cta-button">Standard CTA</a>
-          <a href="" class="cta-button _hollow" title="cta-button _hollow"
-            >Standard CTA</a
-          >
-
-          <a href="" class="cta-button _small" title="cta-button _small"
-            >Small CTA</a
-          >
-          <a
-            href=""
-            class="cta-button _hollow _small"
-            title="cta-button _hollow _small"
-            >Small CTA</a
-          >
-
-          <!-- <pre>The HTML pre element defines preformatted text
-            The text inside a pre element is displayed in a fixed-width font
-              and it preserves both spaces and line breaks</pre> -->
-
-          <form>
-            <h3>Forms</h3>
-
-            <section>
-              <article>
-                <label>Text Input</label>
-                <input type="text" name="" placeholder="Enter text..." />
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Text Input Left</label>
-                <input type="text" name="" placeholder="Enter text..." />
-              </article>
-              <article>
-                <label>Text Input Right</label>
-                <input type="text" name="" placeholder="Enter text..." />
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Password Input</label>
-                <input
-                  type="password"
-                  name=""
-                  placeholder="Enter password..."
-                />
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Email Input</label>
-                <input type="email" name="" placeholder="Email Input..." />
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Text Area</label>
-                <textarea></textarea>
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Number Input</label>
-                <input type="number" name="" placeholder="Number Input..." />
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Phone Number Input</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  placeholder="888-555-1234"
-                />
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Radios</label>
-                <div class="radio">
-                  Yes
-                  <input type="radio" name="radio" />
-                  <span></span>
-                </div>
-                <div class="radio">
-                  No
-                  <input type="radio" name="radio" />
-                  <span></span>
-                </div>
-                <div class="radio">
-                  Maybe
-                  <input type="radio" name="radio" />
-                  <span></span>
-                </div>
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Checkboxes</label>
-                <div class="checkbox">
-                  Checkbox Option 1
-                  <input type="checkbox" />
-                  <span></span>
-                </div>
-                <div class="checkbox">
-                  Checkbox Option 2
-                  <input type="checkbox" />
-                  <span></span>
-                </div>
-                <div class="checkbox">
-                  Checkbox Option 3
-                  <input type="checkbox" />
-                  <span></span>
-                </div>
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Date Input</label>
-                <input type="date" name="bday" />
-              </article>
-            </section>
-
-            <section>
-              <article>
-                <label>Buttons</label>
-                <input type="submit" value="Submit" />
-                <input type="reset" value="Reset" />
-                <input type="button" value="Click me" onclick="alert('Wow!')" />
-              </article>
-            </section>
-          </form>
-        </div>
       </div>
     </div>
 
-    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
-    <!-- 
+    <div class="content-wrapper _banner">
+      <div class="content-container">
+        <div class="close"></div>
+        <h5>This is a banner!</h5>
+        <p>
+          Wow! Very exciting stuff. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Consequatur incidunt corrupti tempore saepe
+          velit rem quisquam dolores illum necessitatibus nisi enim iusto,
+          omnis alias. Facere est mollitia obcaecati quam labore?
+        </p>
+        <a href="" class="cta-button _invert" title="cta-button _invert">Standard CTA</a>
+      </div>
+    </div>
+
+    <!--STANDARD COMPONENTS-->
+    <div class="content-wrapper">
+      <div class="content-container">
+        <h1>STANDARD <span>COMPONENTS</span></h1>
+      </div>
+      <div class="content-container">
+        <h1>Heading <span>1</span></h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis,
+          reiciendis quis corporis repellendus vel magni odio. Blanditiis
+          doloribus magni neque mollitia expedita, veniam totam tenetur
+          accusantium maxime. Quia, <a href="">cupiditate eveniet</a>.
+        </p>
+
+        <ul>
+          <li>Unordered List Item 1</li>
+          <li>Unordered List Item 2</li>
+        </ul>
+
+        <ol>
+          <li>Ordered List Item 1</li>
+          <li>Ordered List Item 2</li>
+        </ol>
+
+        <a href="" class="cta-button" title="cta-button">Standard CTA</a>
+        <a href="" class="cta-button _hollow" title="cta-button _hollow">Standard CTA</a>
+
+        <a href="" class="cta-button _small" title="cta-button _small">Small CTA</a>
+        <a href="" class="cta-button _hollow _small" title="cta-button _hollow _small">Small CTA</a>
+
+        <!-- <pre>The HTML pre element defines preformatted text
+            The text inside a pre element is displayed in a fixed-width font
+              and it preserves both spaces and line breaks</pre> -->
+
+        <form>
+          <h3>Forms</h3>
+
+          <section>
+            <article>
+              <label>Text Input</label>
+              <input type="text" name="" placeholder="Enter text..." />
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Text Input Left</label>
+              <input type="text" name="" placeholder="Enter text..." />
+            </article>
+            <article>
+              <label>Text Input Right</label>
+              <input type="text" name="" placeholder="Enter text..." />
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Password Input</label>
+              <input type="password" name="" placeholder="Enter password..." />
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Email Input</label>
+              <input type="email" name="" placeholder="Email Input..." />
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Text Area</label>
+              <textarea></textarea>
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Number Input</label>
+              <input type="number" name="" placeholder="Number Input..." />
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Phone Number Input</label>
+              <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="888-555-1234" />
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Radios</label>
+              <div class="radio">
+                Yes
+                <input type="radio" name="radio" />
+                <span></span>
+              </div>
+              <div class="radio">
+                No
+                <input type="radio" name="radio" />
+                <span></span>
+              </div>
+              <div class="radio">
+                Maybe
+                <input type="radio" name="radio" />
+                <span></span>
+              </div>
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Checkboxes</label>
+              <div class="checkbox">
+                Checkbox Option 1
+                <input type="checkbox" />
+                <span></span>
+              </div>
+              <div class="checkbox">
+                Checkbox Option 2
+                <input type="checkbox" />
+                <span></span>
+              </div>
+              <div class="checkbox">
+                Checkbox Option 3
+                <input type="checkbox" />
+                <span></span>
+              </div>
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Date Input</label>
+              <input type="date" name="bday" />
+            </article>
+          </section>
+
+          <section>
+            <article>
+              <label>Buttons</label>
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" />
+              <input type="button" value="Click me" onclick="alert('Wow!')" />
+            </article>
+          </section>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <!-- 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script> -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <!-- <script>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!-- <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
-  </body>
+</body>
+
 </html>

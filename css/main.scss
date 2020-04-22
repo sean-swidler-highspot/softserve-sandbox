@@ -251,11 +251,88 @@ a:hover {
       display: none;
     }
   }
+  .domain-list{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 100%;
+    height: auto;
+    margin: 16px 0;
+    background-color: var(--white);
+
+    .domain-card{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 16px 16px 16px 24px;
+      border: 1px solid var(--ltgrey);
+      border-radius: 4px;
+      box-shadow: var(--dropbox);
+
+      .domain-health {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 100%;
+
+        &._good {
+          background: var(--blue);
+        }
+        &._err {
+          background: var(--red);
+        }
+        &._renew {
+          background: var(--dkteal);
+        }
+        &._off {
+          background: var(--dkgrey);
+        }
+      }
+
+      .domain-view {
+        position: absolute;
+        bottom: 6px;
+        right: 10px;
+        width: 32px;
+        height: 24px;
+        background: url('./../img/icon-forward.svg') right center no-repeat;
+        background-size: contain;
+        cursor: pointer;
+      }
+
+      .domain-name {
+        width: 100%;
+        h4 {
+          padding: 0 0 4px 0;
+          font-size: 18px;
+        }
+      }
+
+      .domain-status {
+        width: 100%;
+        h5 {
+          padding: 0;
+          font-size: 14px;
+          font-family: var(--sanspro);
+          font-weight: lighter;
+        }
+      }
+    }
+  } 
+  .domain-view-all {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 @media only screen and (min-width: 715px) {
   #domains {
     .domain-controls {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-content: center;
@@ -292,6 +369,117 @@ a:hover {
         display: block;
       }
     }
+    .domain-list{
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .domain-card{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 16px 32px 16px 16px;
+        border: 1px solid var(--ltgrey);
+        border-radius: 4px;
+        box-shadow: var(--dropbox);
+
+        .domain-health {
+          position: absolute;
+          top: 8px;
+          left: initial;
+          right: 8px;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          border: 4px double var(--white);
+          cursor: pointer;
+          opacity: 0.7;
+          transition: opacity 150ms;
+
+          &:hover {
+            opacity: 1;
+            transition: opacity 150ms;
+          }
+
+          &:hover::after{
+            position: absolute;
+            top: -4px;
+            right: 20px;
+            z-index: 2;
+            width: 56px;
+            height: 16px;
+            font-size: 12px;
+            color: #fff;
+            text-align: center;
+            padding: 4px 0;
+            border-radius: 4px;
+            transition: content 150ms;
+          }
+
+          &._good {
+            background: var(--blue);
+            &:hover::after{
+              content: 'Good';
+              background: var(--blue);
+            }
+          }
+          &._err {
+            background: var(--red);
+            &:hover::after{
+              content: 'Errors';
+              background: var(--red);
+            }
+          }
+          &._renew {
+            background: var(--dkteal);
+            &:hover::after{
+              content: 'Updates';
+              background: var(--dkteal);
+            }
+          }
+          &._off {
+            background: var(--dkgrey);
+            &:hover::after{
+              content: 'Inactive';
+              background: var(--dkgrey);
+            }
+          }
+        }
+
+        .domain-view {
+          bottom: 12px;
+          right: 12px;
+          width: 52px;
+          height: 24px;
+          opacity: 0.7;
+          transition: right 150ms, opacity 150ms;
+
+          &:hover {
+            right: 8px;
+            opacity: 1;
+            transition: right 150ms, opacity 150ms;
+          }
+        }
+
+        .domain-name {
+          width: 100%;
+          h4 {
+            padding: 0 0 4px 0;
+            font-size: 20px;
+          }
+        }
+
+        .domain-status {
+          width: 100%;
+          h5 {
+            font-size: 16px;
+            padding: 0;
+            font-family: var(--sanspro);
+            font-weight: lighter;
+          }
+        }
+      }
+    }  
   }
 }
 

@@ -291,8 +291,106 @@ a:hover {
   display: none;
 }
 
+#domains .domain-list {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  width: 100%;
+  height: auto;
+  margin: 16px 0;
+  background-color: var(--white);
+}
+
+#domains .domain-list .domain-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px 16px 16px 24px;
+  border: 1px solid var(--ltgrey);
+  border-radius: 4px;
+  -webkit-box-shadow: var(--dropbox);
+          box-shadow: var(--dropbox);
+}
+
+#domains .domain-list .domain-card .domain-health {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+}
+
+#domains .domain-list .domain-card .domain-health._good {
+  background: var(--blue);
+}
+
+#domains .domain-list .domain-card .domain-health._err {
+  background: var(--red);
+}
+
+#domains .domain-list .domain-card .domain-health._renew {
+  background: var(--dkteal);
+}
+
+#domains .domain-list .domain-card .domain-health._off {
+  background: var(--dkgrey);
+}
+
+#domains .domain-list .domain-card .domain-view {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  width: 32px;
+  height: 24px;
+  background: url("./../img/icon-forward.svg") right center no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#domains .domain-list .domain-card .domain-name {
+  width: 100%;
+}
+
+#domains .domain-list .domain-card .domain-name h4 {
+  padding: 0 0 4px 0;
+  font-size: 18px;
+}
+
+#domains .domain-list .domain-card .domain-status {
+  width: 100%;
+}
+
+#domains .domain-list .domain-card .domain-status h5 {
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--sanspro);
+  font-weight: lighter;
+}
+
+#domains .domain-view-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 @media only screen and (min-width: 715px) {
   #domains .domain-controls {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -336,6 +434,123 @@ a:hover {
   #domains .domain-controls .domain-edit {
     display: block;
   }
+  #domains .domain-list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+  }
+  #domains .domain-list .domain-card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 16px 32px 16px 16px;
+    border: 1px solid var(--ltgrey);
+    border-radius: 4px;
+    -webkit-box-shadow: var(--dropbox);
+            box-shadow: var(--dropbox);
+  }
+  #domains .domain-list .domain-card .domain-health {
+    position: absolute;
+    top: 8px;
+    left: initial;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 4px double var(--white);
+    cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: opacity 150ms;
+    transition: opacity 150ms;
+  }
+  #domains .domain-list .domain-card .domain-health:hover {
+    opacity: 1;
+    -webkit-transition: opacity 150ms;
+    transition: opacity 150ms;
+  }
+  #domains .domain-list .domain-card .domain-health:hover::after {
+    position: absolute;
+    top: -4px;
+    right: 20px;
+    z-index: 2;
+    width: 56px;
+    height: 16px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 4px;
+    -webkit-transition: content 150ms;
+    transition: content 150ms;
+  }
+  #domains .domain-list .domain-card .domain-health._good {
+    background: var(--blue);
+  }
+  #domains .domain-list .domain-card .domain-health._good:hover::after {
+    content: 'Good';
+    background: var(--blue);
+  }
+  #domains .domain-list .domain-card .domain-health._err {
+    background: var(--red);
+  }
+  #domains .domain-list .domain-card .domain-health._err:hover::after {
+    content: 'Errors';
+    background: var(--red);
+  }
+  #domains .domain-list .domain-card .domain-health._renew {
+    background: var(--dkteal);
+  }
+  #domains .domain-list .domain-card .domain-health._renew:hover::after {
+    content: 'Updates';
+    background: var(--dkteal);
+  }
+  #domains .domain-list .domain-card .domain-health._off {
+    background: var(--dkgrey);
+  }
+  #domains .domain-list .domain-card .domain-health._off:hover::after {
+    content: 'Inactive';
+    background: var(--dkgrey);
+  }
+  #domains .domain-list .domain-card .domain-view {
+    bottom: 12px;
+    right: 12px;
+    width: 52px;
+    height: 24px;
+    opacity: 0.7;
+    -webkit-transition: right 150ms, opacity 150ms;
+    transition: right 150ms, opacity 150ms;
+  }
+  #domains .domain-list .domain-card .domain-view:hover {
+    right: 8px;
+    opacity: 1;
+    -webkit-transition: right 150ms, opacity 150ms;
+    transition: right 150ms, opacity 150ms;
+  }
+  #domains .domain-list .domain-card .domain-name {
+    width: 100%;
+  }
+  #domains .domain-list .domain-card .domain-name h4 {
+    padding: 0 0 4px 0;
+    font-size: 20px;
+  }
+  #domains .domain-list .domain-card .domain-status {
+    width: 100%;
+  }
+  #domains .domain-list .domain-card .domain-status h5 {
+    font-size: 16px;
+    padding: 0;
+    font-family: var(--sanspro);
+    font-weight: lighter;
+  }
 }
 
 /* IMPORT COMPONENTS */
@@ -349,7 +564,7 @@ a:hover {
           box-sizing: border-box;
 }
 
-.content-wrapper > .content-container {
+.content-wrapper .content-container {
   position: relative;
   width: 100%;
   max-width: 1292px;
@@ -365,7 +580,7 @@ a:hover {
   margin: 16px 0;
 }
 
-.content-wrapper._banner > .content-container {
+.content-wrapper._banner .content-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,10 +614,10 @@ a:hover {
 }
 
 #nav nav .nav-logo {
-  width: 24px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   background: url("../img/logo-softserve.svg") no-repeat left center;
-  background-size: cover;
+  background-size: 226px 34px;
 }
 
 #nav nav .nav-search {
